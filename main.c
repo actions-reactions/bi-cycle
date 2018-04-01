@@ -6,7 +6,7 @@
 void wheel(int r, int xa, int ya, int sc)
 {
 
-   int x = 0, y, p;
+    int x = 0, y, p;
 
     y = r;
 
@@ -49,7 +49,7 @@ void wheel(int r, int xa, int ya, int sc)
 
 
 
-        glBegin(GL_POLYGON);
+        glBegin(GL_POINTS);
 
 
         glVertex2d((x+xa)/sc, (y + ya)/sc);
@@ -91,21 +91,8 @@ void wheel(int r, int xa, int ya, int sc)
 }
 
 
-void body(){
 
-    glBegin(GL_POLYGON);
 
-    glVertex2d(-350, 300);
-
-    glVertex2d(0 ,-25);
-
-    glVertex2d(200, 25);
-
-    glVertex2d(25, 275);
-
-    glEnd();
-
-}
 
 
 void display(void)
@@ -120,23 +107,107 @@ void display(void)
 
 
 
+    glColor3ub(0, 0, 0);
+    wheel(175,-400,0,1);
+
+    glColor3ub(0, 0, 0);
+    wheel(170,400,0,1);
+
+    glColor3ub(0, 0, 0);
+    wheel(15,-400,0,1);
+
+    glColor3ub(0, 0, 0);
+    wheel(15,400,0,1);
+
+
+
      glColor3ub(0, 0, 0);
-     wheel(175,-400,0,1);
+     glBegin(GL_LINES);
 
-     glColor3ub(255, 255, 255);
-     wheel(170,-400,0,1);
+     glVertex2d(-400,0);
+     glVertex2d(-300, 250);
+
+     glEnd();
+
+     glColor3ub(0, 0, 0);
+     glBegin(GL_LINES);
+
+
+     glVertex2d(-300, 250);
+
+     glVertex2d(-270,270);
+
+     glEnd();
 
 
 
      glColor3ub(0, 0, 0);
-     wheel(175,400,0,1);
-
-     glColor3ub(255, 255, 255);
-     wheel(170, 400,0,1);
+     glBegin(GL_LINES);
 
 
-     glColor3ub(0,0,0);
-     body();
+     glVertex2d(-300, 250);
+
+     glVertex2d(0,-30);
+
+     glEnd();
+
+
+     glColor3ub(0, 0, 0);
+     glBegin(GL_LINES);
+
+     glVertex2d(0,-30);
+
+     glVertex2d(400, 0);
+
+     glEnd();
+
+
+     glColor3ub(0, 0, 0);
+     glBegin(GL_LINES);
+
+     glVertex2d(400, 0);
+
+     glVertex2d(70,250);
+
+     glEnd();
+
+
+
+     glColor3ub(0, 0, 0);
+     glBegin(GL_LINES);
+
+     glVertex2d(70,250);
+
+     glVertex2d(-300, 250);
+
+     glEnd();
+
+
+     glColor3ub(0, 0, 0);
+     glBegin(GL_LINES);
+
+     glVertex2d(0,-30);
+
+     glVertex2d(80, 280);
+
+     glEnd();
+
+
+     glColor3ub(0, 0, 0);
+     glBegin(GL_POLYGON);
+
+     glVertex2d(30, 280);
+
+     glVertex2d(120, 280);
+
+     glVertex2d(120, 300);
+
+     glVertex2d(30, 300);
+
+     glEnd();
+
+
+
 
 
     /* don't wait!
