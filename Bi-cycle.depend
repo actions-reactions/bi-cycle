@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1522586773 source:u:\prottoyx\documents\codeblocks\bi-cycle\main.c
+	<GL/gl.h>
+	<GL/glut.h>
+	<stdio.h>
+
